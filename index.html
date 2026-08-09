@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/dd8c49730d.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <!-- Contact List -->
+            <section class="ListContainer">
+
+                <h2>My Contacts</h2>
+
+                <p class="contact-count">
+                    Contacts: <span id="contactCount">0</span>
+                </p>
+
+                <!-- Search -->
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search contact"
+                    >
+                </div>
+
+                <div id="people" class="Contact_list"></div>
+
+                <p id="noContacts" class="no-contacts">
+                    No contacts available.
+                </p>
+
+            </section>
+
+
+            <!-- Add / Edit Contact Form -->
+            <form autocomplete="off" class="js-form">
+
+                <h2 id="formTitle">Add Contact</h2>
+
+                <div class="name">
+                    <i class="far fa-user"></i>
+                    <input
+                        type="text"
+                        required
+                        id="fullName"
+                        placeholder="Enter name"
+                    >
+                </div>
+
+                <div class="email">
+                    <i class="fas fa-at"></i>
+                    <input
+                        type="email"
+                        required
+                        id="myEmail"
+                        placeholder="Enter email"
+                    >
+                </div>
+
+                <div class="number">
+                    <i class="fas fa-phone"></i>
+                    <input
+                        type="tel"
+                        required
+                        id="myTel"
+                        placeholder="Enter number"
+                    >
+                </div>
+
+                <div class="img">
+                    <i class="far fa-image"></i>
+                    <input
+                        type="url"
+                        required
+                        id="imgurl"
+                        placeholder="Enter image URL"
+                    >
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submitbtn">
+                        Add Contact
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="cancelbtn"
+                        hidden
+                    >
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

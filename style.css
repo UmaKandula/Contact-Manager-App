@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #eef0f4;
+    --color: #333;
+    --contactIconColor: crimson;
+    --inputTextColor: #111;
+    --deleteIconColor: #111;
+
+    --filter:
+        drop-shadow(-8px -8px 12px #ffffff)
+        drop-shadow(8px 8px 12px #c3c5c8);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    background: var(--bg-color);
+    color: var(--color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5vh auto;
+    display: flex;
+    gap: 60px;
+}
+
+
+/* ---------------- CONTACT LIST ---------------- */
+
+.ListContainer {
+    width: 50%;
+    min-height: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    background: var(--bg-color);
+    filter: var(--filter);
+}
+
+.ListContainer h2 {
+    margin-bottom: 8px;
+}
+
+.contact-count {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    filter: var(--filter);
+}
+
+.search-box i {
+    color: var(--contactIconColor);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+
+/* Contact */
+
+.person {
+    display: flex;
+    column-gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    position: relative;
+}
+
+.person img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contactdetail {
+    flex: 1;
+    padding-right: 80px;
+}
+
+.contactdetail h3 {
+    margin-bottom: 5px;
+}
+
+.contactdetail p {
+    margin-bottom: 3px;
+    word-break: break-word;
+}
+
+.contactIcon {
+    margin-right: 8px;
+    color: var(--contactIconColor);
+}
+
+
+/* Buttons */
+
+.contact-actions {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.edit-contact,
+.delete-contact {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.edit-contact svg,
+.delete-contact svg {
+    width: 25px;
+    height: 25px;
+}
+
+.edit-contact svg {
+    fill: #2463eb;
+}
+
+.delete-contact svg {
+    fill: var(--deleteIconColor);
+}
+
+
+/* No contacts */
+
+.no-contacts {
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+
+/* ---------------- FORM ---------------- */
+
+form {
+    width: 50%;
+    margin-top: 80px;
+}
+
+form h2 {
+    margin-bottom: 30px;
+}
+
+.name,
+.number,
+.email,
+.img {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 5px 15px;
+    background: var(--bg-color);
+    border: 5px solid var(--bg-color);
+    filter: var(--filter);
+}
+
+.name i,
+.number i,
+.email i,
+.img i {
+    color: var(--contactIconColor);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 10px 0;
+    outline: none;
+    color: var(--inputTextColor);
+}
+
+
+/* Form buttons */
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.submitbtn,
+.cancelbtn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submitbtn {
+    background: crimson;
+    color: white;
+}
+
+.cancelbtn {
+    background: #777;
+    color: white;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ListContainer,
+    form {
+        width: 100%;
+    }
+
+    form {
+        margin-top: 0;
+    }
+}
